@@ -3,6 +3,8 @@
 This is a project to keep track of students within various schools.
 This helps to prevent kidnapping 
 
+<img src="./assets/screenshot.png" />
+
 ## Getting Started
 
 ```bash
