@@ -1,16 +1,19 @@
-# tutorial_app
+# School Bus Tracker
 
-A new Flutter project.
+This is a project to keep track of students within various schools.
+This helps to prevent kidnapping 
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+```bash
+	git clone https://github.com/king-kloy/bus_tracker_app.git
+	
+	# change to the project directory
+	cd bus_tracker_app
+	
+	# to run the app make sure you've android emulator installed
+	# and the flutter sdk too
+	flutter run
+```
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+### Happy Hacking
