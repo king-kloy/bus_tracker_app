@@ -1,9 +1,15 @@
+import 'package:bus_tracker_app/about_school.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
 
-import './sign_in.dart';
-import './sign_in_otp.dart';
+// import './sign_in.dart';
+// import './sign_in_otp.dart';
+import './parent_profile_screen.dart';
+import './edit_location_screen.dart';
+import './settings.dart';
+import './about_school.dart';
+import './contact_us.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -35,8 +41,12 @@ class _HomePageState extends State<HomePage> {
         child: ListView(
           children: <Widget>[
             UserAccountsDrawerHeader(
-              accountEmail: Row(children: <Widget>[ Spacer(),
-                Icon(Icons.edit, color: Colors.white,)
+              accountEmail: Row(children: <Widget>[
+                Spacer(),
+                Icon(
+                  Icons.edit,
+                  color: Colors.white,
+                )
               ]),
               accountName: Text("kloy"),
               decoration: BoxDecoration(
@@ -49,9 +59,9 @@ class _HomePageState extends State<HomePage> {
                 title: Text("Home"),
                 leading: Icon(Icons.home),
                 onTap: () {
-                  Navigator.of(context).pop();
-                  Navigator.of(context).push(MaterialPageRoute(
-                      builder: (BuildContext context) => SignIn()));
+                  // Navigator.of(context).pop();
+                  // Navigator.of(context).push(MaterialPageRoute(
+                  //     builder: (BuildContext context) => HomePage()));
                 }),
             ListTile(
                 title: Text("Profile"),
@@ -59,7 +69,7 @@ class _HomePageState extends State<HomePage> {
                 onTap: () {
                   Navigator.of(context).pop();
                   Navigator.of(context).push(MaterialPageRoute(
-                      builder: (BuildContext context) => SignInOTP()));
+                      builder: (BuildContext context) => ParentProfilePage()));
                 }),
             ListTile(
                 title: Text("Edit Location"),
@@ -67,7 +77,7 @@ class _HomePageState extends State<HomePage> {
                 onTap: () {
                   Navigator.of(context).pop();
                   Navigator.of(context).push(MaterialPageRoute(
-                      builder: (BuildContext context) => SignIn()));
+                      builder: (BuildContext context) => EditLocationPage()));
                 }),
             ListTile(
                 title: Text("Settings"),
@@ -75,18 +85,24 @@ class _HomePageState extends State<HomePage> {
                 onTap: () {
                   Navigator.of(context).pop();
                   Navigator.of(context).push(MaterialPageRoute(
-                      builder: (BuildContext context) => SignInOTP()));
+                      builder: (BuildContext context) => SettingsPage()));
                 }),
             ListTile(
-              title: Text("About School"),
-              leading: Icon(Icons.school),
-              onTap: () => Navigator.pop(context),
-            ),
+                title: Text("About School"),
+                leading: Icon(Icons.school),
+                onTap: () {
+                  Navigator.of(context).pop();
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (BuildContext context) => AboutSchool()));
+                }),
             ListTile(
-              title: Text("Contact Us"),
-              leading: Icon(Icons.contacts),
-              onTap: () => Navigator.pop(context),
-            ),
+                title: Text("Contact Us"),
+                leading: Icon(Icons.contacts),
+                onTap: () {
+                  Navigator.of(context).pop();
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (BuildContext context) => ContactUs()));
+                }),
             Divider(),
             ListTile(
               title: Text("Logout"),

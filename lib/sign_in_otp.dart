@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './home_screen.dart';
+
 class SignInOTP extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Scaffold(
@@ -101,7 +103,11 @@ class _SignInBottomPartStateOTP extends State<SignInBottomPartOTP> {
                   border: InputBorder.none,
                   hintText: 'OTP code',
                   suffixIcon: InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.of(context).pop();
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (BuildContext context) => HomePage()));
+                    },
                     child: Icon(
                       Icons.arrow_forward,
                       color: Colors.blue,

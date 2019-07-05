@@ -12,7 +12,6 @@ class _ParentProfilePageState extends State<ParentProfilePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.arrow_back),
         title: Text("Profile"),
         backgroundColor: Colors.deepOrange,
         actions: <Widget>[

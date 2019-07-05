@@ -14,7 +14,11 @@ class _EditLocationPageState extends State<EditLocationPage> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0.0,
-        leading: Icon(Icons.arrow_back),
+        leading: InkWell(
+            onTap: () {
+              Navigator.of(context).pop();
+            },
+            child: Icon(Icons.arrow_back)),
         title: Text("Edit Location"),
         backgroundColor: Colors.deepOrange,
         actions: <Widget>[
