@@ -29,7 +29,7 @@ class AboutSchool extends StatelessWidget {
           padding: EdgeInsets.only(left: 16, right: 16, bottom: 8),
           decoration: BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage("assets/food.jpg"), fit: BoxFit.cover)),
+                  image: AssetImage("assets/bus.jpg"), fit: BoxFit.cover)),
           child: Stack(
             children: <Widget>[
               Positioned(
