@@ -62,7 +62,11 @@ class _ParentProfilePageState extends State<ParentProfilePage> {
                                   fontWeight: FontWeight.bold,
                                   color: Colors.white),
                             ),
-                            Icon(Icons.edit)
+                            InkWell(
+                                onTap: () {
+                                  _showEditProfileDialogue(context);
+                                },
+                                child: Icon(Icons.edit))
                           ],
                         ),
                         subtitle: Row(
@@ -101,5 +105,103 @@ class _ParentProfilePageState extends State<ParentProfilePage> {
         ),
       ),
     );
+  }
+
+  _showEditProfileDialogue(BuildContext context) {
+    showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(20.0))),
+            content: Container(
+              width: 300.0,
+              height: 300.0,
+              decoration: BoxDecoration(
+                shape: BoxShape.rectangle,
+                color: const Color(0xFFFFFF),
+              ),
+              child: Column(
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10.0),
+                        color: Colors.white,
+                      ),
+                      height: 190,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Container(
+                            decoration: BoxDecoration(
+                                color: Colors.deepOrange,
+                                borderRadius: BorderRadius.circular(10.0)),
+                            child: ListTile(
+                              leading: CircleAvatar(
+                                radius: 30.0,
+                                backgroundImage: NetworkImage(
+                                    'assets/images/dope.jpg',
+                                    scale: 5.0),
+                                backgroundColor: Colors.grey,
+                              ),
+                              title: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: <Widget>[
+                                  Text(
+                                    'Some Mother',
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white),
+                                  ),
+                                ],
+                              ),
+                              subtitle: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: <Widget>[
+                                  Column(
+                                    children: <Widget>[
+                                      Text("mother"),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          ListTile(
+                            leading: Icon(Icons.call),
+                            title: Text('+233542587'),
+                          ),
+                          ListTile(
+                            leading: Icon(Icons.mail),
+                            title: Text('example@gmail.com'),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Material(
+                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                    color: Colors.blueAccent,
+                    child: OutlineButton(
+                      child: Text(
+                        'Done',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.white,
+                        ),
+                        textAlign: TextAlign.justify,
+                      ),
+                      onPressed: null,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          );
+        });
   }
 }
