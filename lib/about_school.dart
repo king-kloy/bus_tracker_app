@@ -7,7 +7,7 @@ class AboutSchool extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("About School"),
-        backgroundColor: Colors.orange,
+        backgroundColor: Colors.deepOrange,
       ),
       body: _aboutSchool(),
     );
@@ -51,7 +51,7 @@ class AboutSchool extends StatelessWidget {
                   Text(
                 "History of School",
                 style: TextStyle(
-                  color: Colors.orange,
+                  color: Colors.deepOrange,
                 ),
                 textAlign: TextAlign.left,
               ),

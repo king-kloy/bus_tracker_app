@@ -7,7 +7,7 @@ class ContactUs extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Contact Us"),
-        backgroundColor: Colors.orange,
+        backgroundColor: Colors.deepOrange,
       ),
       body: _contactUs(),
     );
@@ -34,7 +34,7 @@ class ContactUs extends StatelessWidget {
                     leading: Icon(
                       Icons.phone,
                       size: 30,
-                      color: Colors.orange,
+                      color: Colors.deepOrange,
                     ),
                     title: Text("Contact",
                         style: TextStyle(
@@ -56,7 +56,7 @@ class ContactUs extends StatelessWidget {
                     leading: Icon(
                       Icons.mail,
                       size: 30,
-                      color: Colors.orange,
+                      color: Colors.deepOrange,
                     ),
                     title: Text("Mail",
                         style: TextStyle(
@@ -77,7 +77,7 @@ class ContactUs extends StatelessWidget {
                     leading: Icon(
                       Icons.location_on,
                       size: 30,
-                      color: Colors.orange,
+                      color: Colors.deepOrange,
                     ),
                     title: Text("Address",
                         style: TextStyle(
@@ -102,8 +102,8 @@ class ContactUs extends StatelessWidget {
               ),
               Column(
                  children: <Widget>[
-                 Text('Or',style:TextStyle(color: Colors.orange)),
-                 Text("Write us Directly",style:TextStyle(color: Colors.orange))
+                 Text('Or',style:TextStyle(color: Colors.deepOrange)),
+                 Text("Write us Directly",style:TextStyle(color: Colors.deepOrange))
                  ],
                ),
                Expanded(
@@ -146,11 +146,11 @@ class ContactUs extends StatelessWidget {
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(15)
             ),  
-            child: Text("Submit"),
+            child: Text("Submit", style: TextStyle(color: Colors.white),),
             elevation: 4.0,
             onPressed: (){},
-            color: Colors.purple,
-            splashColor: Colors.blueGrey,
+            color: Colors.blue,
+            splashColor: Colors.lightBlue,
           )
           )),
         ],

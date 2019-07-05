@@ -12,7 +12,7 @@ class _SettingsPageState extends State<SettingsPage> {
     return Scaffold(
         appBar: AppBar(
           title: Text("Settings"),
-          backgroundColor: Colors.orange,
+          backgroundColor: Colors.deepOrange,
         ),
         body: _settingsPage(),
 //        margin: EdgeInsets.all(10),
@@ -31,7 +31,7 @@ class _SettingsPageState extends State<SettingsPage> {
               children: <Widget>[
                 Text(
                   "Remainder",
-                  style: TextStyle(color: Colors.orange, fontSize: 16),
+                  style: TextStyle(color: Colors.deepOrange, fontSize: 16),
                 )
               ],
             ),
@@ -91,7 +91,7 @@ class _SettingsPageState extends State<SettingsPage> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Text("Set notification alert",
-                    style: TextStyle(color: Colors.orange)),
+                    style: TextStyle(color: Colors.deepOrange)),
                 Text("Select all", style: TextStyle(color: Colors.blue))
               ],
             ),
