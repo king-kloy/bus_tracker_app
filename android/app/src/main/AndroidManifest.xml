@@ -1,6 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.tutorial_app">
 
+    <meta-data android:name="com.google.android.geo.API_KEY"
+        android:value="AIzaSyC9mWlLY9gR1WZ83gDl74tuPRqcCcUtHd0"/>
+
+
     <!-- io.flutter.app.FlutterApplication is an android.app.Application that
          calls FlutterMain.startInitialization(this); in its onCreate method.
          In most cases you can leave this as-is, but you if you want to provide
