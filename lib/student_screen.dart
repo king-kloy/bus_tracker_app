@@ -1,3 +1,4 @@
+import 'package:bus_tracker_app/MapSample.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
@@ -12,7 +13,6 @@ class _StudentPageState extends State<StudentPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.arrow_back),
         title: Text("studentName"),
         backgroundColor: Colors.deepOrange,
         actions: <Widget>[
@@ -28,18 +28,7 @@ class _StudentPageState extends State<StudentPage> {
           )
         ],
       ),
-      body: SingleChildScrollView(
-        child: Stack(
-          children: <Widget>[
-            SizedBox(
-              height: 10.0,
-            ),
-            Center(
-              child: Text('Map Here'),
-            ),
-          ],
-        ),
-      ),
+      body: MapSample(),
       bottomNavigationBar: BottomBar(),
     );
   }
@@ -123,7 +112,7 @@ class BottomBar extends StatelessWidget {
                 height: 20,
               ),
               ListTile(
-                leading: Icon(Icons.my_location),
+                leading: Icon(Icons.my_location, color: Colors.deepOrange,),
                 title: Text(
                   'Pick Up Time',
                   style: TextStyle(fontSize: 18.0),
@@ -146,7 +135,7 @@ class BottomBar extends StatelessWidget {
                 ],
               ),
               ListTile(
-                leading: Icon(Icons.place),
+                leading: Icon(Icons.place, color: Colors.deepOrange,),
                 title: Text(
                   'Drop Time',
                   style: TextStyle(fontSize: 18.0),
