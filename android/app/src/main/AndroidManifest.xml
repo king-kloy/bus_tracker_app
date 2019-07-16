@@ -1,9 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.tutorial_app">
 
-    <meta-data android:name="com.google.android.geo.API_KEY"
-        android:value="AIzaSyC9mWlLY9gR1WZ83gDl74tuPRqcCcUtHd0"/>
-
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <!-- io.flutter.app.FlutterApplication is an android.app.Application that
          calls FlutterMain.startInitialization(this); in its onCreate method.
@@ -14,6 +12,10 @@
         android:name="io.flutter.app.FlutterApplication"
         android:label="tutorial_app"
         android:icon="@mipmap/ic_launcher">
+
+        <meta-data android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyC9mWlLY9gR1WZ83gDl74tuPRqcCcUtHd0"/>
+
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
