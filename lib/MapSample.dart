@@ -32,11 +32,11 @@ class MapSampleState extends State<MapSample> {
     return FloatingActionButton(
       onPressed: function,
       materialTapTargetSize: MaterialTapTargetSize.padded,
-      backgroundColor: Colors.transparent,
+      backgroundColor: Colors.deepOrange,
       child: Icon(
         icon,
-        size: 50.0,
-        color: (Colors.black87),
+        size: 40.0,
+        color: (Colors.white),
       ),
     );
   }
@@ -60,7 +60,7 @@ class MapSampleState extends State<MapSample> {
               child: Column(
                 children: <Widget>[
                   SizedBox(
-                    height: 450.0,
+                    height: 400.0,
                   ),
                   button(_getCurrentLocation, Icons.my_location),
                 ],
@@ -85,7 +85,7 @@ class MapSampleState extends State<MapSample> {
   Future<void> _getCurrentLocation() async {
     currentLocation = await locateUser();
     setState(() {
-      _center = LatLng(6.6951, -1.5494);
+      _center = LatLng(currentLocation.latitude, currentLocation.longitude);
     });
 
     print('Center $_center');
