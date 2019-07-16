@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:bus_tracker_app/about_school.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
@@ -10,6 +12,7 @@ import './edit_location_screen.dart';
 import './settings.dart';
 import './about_school.dart';
 import './contact_us.dart';
+import './student_screen.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -107,7 +110,7 @@ class _HomePageState extends State<HomePage> {
             ListTile(
               title: Text("Logout"),
               leading: Icon(Icons.exit_to_app),
-              onTap: () => Navigator.pop(context),
+              onTap: () => exit(0),
             ),
           ],
         ),
@@ -139,76 +142,84 @@ class ChildrenCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Padding(
         padding: EdgeInsets.fromLTRB(8.0, 10.0, 8.0, 0),
-        child: Card(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(
-              Radius.circular(16.0),
+        child: InkWell(
+          onTap: () {
+            Navigator.of(context).push(MaterialPageRoute(
+                builder: (BuildContext context) => StudentPage()));
+          },
+          child: Card(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(
+                Radius.circular(16.0),
+              ),
             ),
-          ),
-          margin: EdgeInsets.symmetric(horizontal: 12.0),
-          elevation: 10.0,
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            children: <Widget>[
-              Container(
-                height: 370.0,
-                width: 500.0,
-                child: Image(
-                  image: AssetImage('assets/dope.jpg'),
-                  height: 200.0,
-                  width: 150,
-                ),
-              ),
-              Column(
-                children: <Widget>[
-                  // SizedBox(height: 20.0,),
-                  Container(
-                    padding: EdgeInsets.fromLTRB(16.0, 10.0, 16.0, 16.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      mainAxisSize: MainAxisSize.max,
-                      children: <Widget>[
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisSize: MainAxisSize.max,
-                          children: <Widget>[
-                            Text(
-                              studentName,
-                              style: TextStyle(
-                                  fontSize: 18.0, fontWeight: FontWeight.bold),
-                            ),
-                            Divider(
-                              color: Colors.grey,
-                              height: 10.0,
-                            ),
-                            Text(
-                              studentSchool,
-                              style: TextStyle(
-                                  fontWeight: FontWeight.normal,
-                                  fontSize: 16.0),
-                            )
-                          ],
-                        ),
-                        Row(
-                          children: <Widget>[
-                            Icon(
-                              Icons.check_circle,
-                              color: Colors.yellow,
-                            ),
-                            Text(
-                              studentStatus,
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 16.0),
-                            )
-                          ],
-                        )
-                      ],
-                    ),
+            margin: EdgeInsets.symmetric(horizontal: 12.0),
+            elevation: 10.0,
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              children: <Widget>[
+                Container(
+                  height: 370.0,
+                  width: 500.0,
+                  child: Image(
+                    image: AssetImage('assets/dope.jpg'),
+                    height: 200.0,
+                    width: 150,
                   ),
-                ],
-              ),
-            ],
+                ),
+                Column(
+                  children: <Widget>[
+                    // SizedBox(height: 20.0,),
+                    Container(
+                      padding: EdgeInsets.fromLTRB(16.0, 10.0, 16.0, 16.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        mainAxisSize: MainAxisSize.max,
+                        children: <Widget>[
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisSize: MainAxisSize.max,
+                            children: <Widget>[
+                              Text(
+                                studentName,
+                                style: TextStyle(
+                                    fontSize: 18.0,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              Divider(
+                                color: Colors.grey,
+                                height: 10.0,
+                              ),
+                              Text(
+                                studentSchool,
+                                style: TextStyle(
+                                    fontWeight: FontWeight.normal,
+                                    fontSize: 16.0),
+                              )
+                            ],
+                          ),
+                          Row(
+                            children: <Widget>[
+                              Icon(
+                                Icons.check_circle,
+                                color: Colors.yellow,
+                              ),
+                              Text(
+                                studentStatus,
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16.0),
+                              )
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       );
