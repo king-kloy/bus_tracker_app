@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
 
+import './MapSample.dart';
+
 class EditLocationPage extends StatefulWidget {
   @override
   _EditLocationPageState createState() => _EditLocationPageState();
@@ -34,88 +36,85 @@ class _EditLocationPageState extends State<EditLocationPage> {
           )
         ],
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: <Widget>[
-            Container(
-              color: Colors.deepOrange,
-              child: Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    Container(
-                      height: 20.0,
-                      width: 100,
-                      padding: EdgeInsets.symmetric(horizontal: 5.0),
-                      margin: EdgeInsets.all(10.0),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10.0),
-                          color: Colors.white),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      body: Stack(
+        children: <Widget>[
+          MapSample(),
+          Column(
+            children: <Widget>[
+              Container(
+                color: Colors.deepOrange,
+                child: Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Container(
+                        height: 20.0,
+                        width: 100,
+                        padding: EdgeInsets.symmetric(horizontal: 5.0),
+                        margin: EdgeInsets.all(10.0),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10.0),
+                            color: Colors.white),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Icon(
+                              Icons.edit_location,
+                              color: Colors.deepOrange,
+                            ),
+                            Text("Pick Up",
+                                style: TextStyle(
+                                  color: Colors.deepOrange,
+                                  fontSize: 17.0,
+                                )),
+                          ],
+                        ),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: <Widget>[
                           Icon(
-                            Icons.edit_location,
-                            color: Colors.deepOrange,
+                            Icons.place,
+                            color: Colors.white,
                           ),
-                          Text("Pick Up",
-                              style: TextStyle(
-                                color: Colors.deepOrange,
-                                fontSize: 17.0,
-                              )),
+                          Text(
+                            "Drop",
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 17.0),
+                          ),
                         ],
                       ),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: <Widget>[
-                        Icon(
-                          Icons.place,
-                          color: Colors.white,
-                        ),
-                        Text(
-                          "Drop",
-                          style: TextStyle(color: Colors.white, fontSize: 17.0),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.all(20.0),
-              child: Material(
-                elevation: 5.0,
-                borderRadius: BorderRadius.all(Radius.circular(30.0)),
-                child: TextField(
-                  cursorColor: appTheme.primaryColor,
-                  decoration: InputDecoration(
-                    border: InputBorder.none,
-                    hintText: 'search place...',
-                    suffixIcon: InkWell(
-                      onTap: () {},
-                      child: Icon(
-                        Icons.search,
-                        color: Colors.blue,
-                      ),
-                    ),
-                    contentPadding:
-                        EdgeInsets.symmetric(horizontal: 32.0, vertical: 13.0),
+                    ],
                   ),
                 ),
               ),
-            ),
-            Stack(
-              children: <Widget>[
-                Center(
-                  child: Text('Map Here'),
+              Padding(
+                padding: EdgeInsets.all(20.0),
+                child: Material(
+                  elevation: 5.0,
+                  borderRadius: BorderRadius.all(Radius.circular(30.0)),
+                  child: TextField(
+                    cursorColor: appTheme.primaryColor,
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
+                      hintText: 'search place...',
+                      suffixIcon: InkWell(
+                        onTap: () {},
+                        child: Icon(
+                          Icons.search,
+                          color: Colors.blue,
+                        ),
+                      ),
+                      contentPadding: EdgeInsets.symmetric(
+                          horizontal: 32.0, vertical: 13.0),
+                    ),
+                  ),
                 ),
-              ],
-            ),
-          ],
-        ),
+              ),
+            ],
+          ),
+        ],
       ),
       bottomNavigationBar: BottomBar(),
     );
@@ -127,7 +126,11 @@ class BottomBar extends StatelessWidget {
   final List<BottomNavigationBarItem> bottomNavigationItems = [];
 
   void _showSetReminderDialogue(BuildContext context) async {
-    showDialog(context: context, builder: (context) {});
+    showDialog(
+        context: context,
+        builder: (context) {
+          return;
+        });
   }
 
   BottomBar() {
