@@ -41,6 +41,7 @@ class _EditLocationPageState extends State<EditLocationPage> {
           MapSample(),
           Column(
             children: <Widget>[
+              
               Container(
                 color: Colors.deepOrange,
                 child: Padding(
@@ -126,11 +127,7 @@ class BottomBar extends StatelessWidget {
   final List<BottomNavigationBarItem> bottomNavigationItems = [];
 
   void _showSetReminderDialogue(BuildContext context) async {
-    showDialog(
-        context: context,
-        builder: (context) {
-          return;
-        });
+    showDialog(context: context, builder: (context) {return;});
   }
 
   BottomBar() {

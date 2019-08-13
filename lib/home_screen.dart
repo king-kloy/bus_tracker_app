@@ -51,6 +51,7 @@ class _HomePageState extends State<HomePage> {
                   color: Colors.white,
                 )
               ]),
+              
               accountName: Text("kloy"),
               decoration: BoxDecoration(
                   image: DecorationImage(

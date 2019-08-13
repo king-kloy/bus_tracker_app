@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
 import './home_screen.dart';
+import './sign_in.dart';
 
 void main() => runApp(
       MaterialApp(
         title: 'Flight List Mock Up',
         debugShowCheckedModeBanner: false,
-        home: Screen(),
+        // home: Screen(),
+        home: SignIn(),
         theme: appTheme,
       ),
     );
