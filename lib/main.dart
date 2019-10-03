@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-import './home_screen.dart';
-import './sign_in.dart';
+// screens import
+import 'screens/home_screen.dart';
+import 'screens/sign_in.dart';
 
 void main() => runApp(
       MaterialApp(

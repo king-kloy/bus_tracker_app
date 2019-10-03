@@ -1,7 +1,9 @@
-import 'package:bus_tracker_app/MapSample.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
+
+// map import
+import '../map/MapSample.dart';
 
 class StudentPage extends StatefulWidget {
   @override

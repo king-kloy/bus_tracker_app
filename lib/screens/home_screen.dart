@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:bus_tracker_app/about_school.dart';
+import 'package:bus_tracker_app/screens/about_school.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
