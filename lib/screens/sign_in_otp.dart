@@ -50,9 +50,9 @@ class SignInTopPartOTP extends StatelessWidget {
                       Padding(
                         padding: EdgeInsets.symmetric(horizontal: 5.0),
                         child: Text(
-                          'SCHOOL BUS TRACKER',
+                          'SAFET',
                           style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 40,
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                           ),
